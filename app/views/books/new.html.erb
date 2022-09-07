@@ -1,2 +1,15 @@
-<h1>Books#new</h1>
-<p>Find me in app/views/books/new.html.erb</p>
+<p class="succes">Book was successfully created</p>
+
+<%= form_with model: @book do |f| %>
+<p class="new">
+  <strong>Title:</strong>
+</p>
+<p class="new">
+  <strong>Body:</strong>
+</p>
+<div>
+  <%= link_to "Edit", '/books/:id/edit(books.id)' %>
+  <%="|" %>
+  <%= link_to "Back", :back %>
+</div>
+<% end %>
