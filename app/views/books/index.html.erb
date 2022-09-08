@@ -13,11 +13,11 @@
     <tr>
       <td><span><%= books.title %></span></td>
       <td><span><%= books.body %></span></td>
-      <%= form_with model: @book do  %>
+
       <td><%= link_to "Show", book_path(books.id) %></td>
       <td><%= link_to "Edit", edit_book_path(books.id) %></td>
-      <td><%= link_to "Destroy", method: :delete %></td>
-      <% end %>
+      <td><%= link_to "Destroy",book_path(books.id),method: :delete,"data-confirm" => "本当に削除しますか？" %></td>
+
     </tr>
   <% end %>
   </tbody>
@@ -26,6 +26,10 @@
 
 
 <h2>New book</h2>
+
+
+
+
 <%= form_with model: @books,url: '/books',method: :post do |f| %>
 
 <div class="field">

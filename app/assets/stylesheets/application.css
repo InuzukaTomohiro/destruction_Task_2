@@ -47,6 +47,10 @@ p {
 
 a {
   cursor: pointer;
+  color:#000000;
+}
+
+a:visited {
   color:#666666;
 }
 
@@ -54,6 +58,11 @@ a:hover {
   background-color: black;
   color: white;
 }
+
+.start {
+  color:#666666;
+}
+
 /*index画面レイアウト*/
 th {
   font-size: 13px;
@@ -89,4 +98,9 @@ textarea {
 
 input[type="submit"] {
   padding: 1px 6px;
+}
+
+/*show画面レイアウト*/
+.edit,.show{
+  font-size:13px;
 }
